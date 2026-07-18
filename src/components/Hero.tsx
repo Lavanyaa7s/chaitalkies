@@ -104,7 +104,8 @@ export function Hero() {
               <motion.img 
                 src="images/setmeals.png" 
                 alt="Signature Thali" 
-                className="w-full h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] relative z-20"
+                className="w-full h-auto object-contain drop-shadow-2xl md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] relative z-20"
+                style={{ willChange: 'transform, opacity' }}
                 initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
@@ -112,35 +113,35 @@ export function Hero() {
               />
             </ParallaxWrapper>
             
-            <FloatingElement delay={3.5 + 0} yOffset={25} duration={5} className="absolute top-[10%] right-[0%] z-30 w-16 md:w-24">
-              <ParallaxWrapper speed={0.1}>
-                <motion.img whileHover={{ rotate: 90 }} src="images/spice_star_anise_1784383227241.png" className="w-full object-contain blur-[1px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] transform rotate-12" alt="Star Anise" />
-              </ParallaxWrapper>
-            </FloatingElement>
+            <ParallaxWrapper speed={0.1} className="absolute top-[10%] right-[0%] z-30 w-16 md:w-24">
+              <FloatingElement delay={3.5 + 0} yOffset={25} duration={5}>
+                <img src="images/spice_star_anise_1784383227241.png" className="w-full object-contain md:blur-[1px] md:drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] transform rotate-12" alt="Star Anise" />
+              </FloatingElement>
+            </ParallaxWrapper>
             
-            <FloatingElement delay={3.5 + 1} yOffset={35} duration={6} className="absolute bottom-[20%] right-[5%] z-30 w-20 md:w-32">
-              <ParallaxWrapper speed={0.15}>
-                <motion.img whileHover={{ rotate: 45 }} src="images/spice_chili_1784383218022.png" className="w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-45" alt="Chili" />
-              </ParallaxWrapper>
-            </FloatingElement>
+            <ParallaxWrapper speed={0.15} className="absolute bottom-[20%] right-[5%] z-30 w-20 md:w-32">
+              <FloatingElement delay={3.5 + 1} yOffset={35} duration={6}>
+                <img src="images/spice_chili_1784383218022.png" className="w-full object-contain md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-45" alt="Chili" />
+              </FloatingElement>
+            </ParallaxWrapper>
             
-            <FloatingElement delay={3.5 + 0.5} yOffset={20} duration={4.5} className="absolute top-[35%] left-[-5%] z-30 w-12 md:w-20">
-              <ParallaxWrapper speed={0.08}>
-                <motion.img whileHover={{ rotate: -90 }} src="images/spice_cardamom_1784384378093.png" className="w-full object-contain blur-[1px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] transform -rotate-12" alt="Cardamom" />
-              </ParallaxWrapper>
-            </FloatingElement>
+            <ParallaxWrapper speed={0.08} className="absolute top-[35%] left-[-5%] z-30 w-12 md:w-20">
+              <FloatingElement delay={3.5 + 0.5} yOffset={20} duration={4.5}>
+                <img src="images/spice_cardamom_1784384378093.png" className="w-full object-contain md:blur-[1px] md:drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] transform -rotate-12" alt="Cardamom" />
+              </FloatingElement>
+            </ParallaxWrapper>
             
-            <FloatingElement delay={3.5 + 1.5} yOffset={30} duration={5.5} className="absolute bottom-[10%] left-[5%] z-30 w-24 md:w-36">
-              <ParallaxWrapper speed={0.12}>
-                <motion.img whileHover={{ rotate: 180 }} src="images/spice_curry_leaf_1784383245455.png" className="w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-[70deg]" alt="Curry Leaves" />
-              </ParallaxWrapper>
-            </FloatingElement>
+            <ParallaxWrapper speed={0.12} className="absolute bottom-[10%] left-[5%] z-30 w-24 md:w-36">
+              <FloatingElement delay={3.5 + 1.5} yOffset={30} duration={5.5}>
+                <img src="images/spice_curry_leaf_1784383245455.png" className="w-full object-contain md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-[70deg]" alt="Curry Leaves" />
+              </FloatingElement>
+            </ParallaxWrapper>
             
-            <FloatingElement delay={3.5 + 0.8} yOffset={25} duration={4.8} className="absolute top-[15%] left-[10%] z-30 w-16 md:w-28">
-              <ParallaxWrapper speed={0.1}>
-                <motion.img whileHover={{ rotate: 90 }} src="images/spice_cinnamon_1784383237128.png" className="w-full object-contain blur-[2px] drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform rotate-45" alt="Cinnamon" />
-              </ParallaxWrapper>
-            </FloatingElement>
+            <ParallaxWrapper speed={0.1} className="absolute top-[15%] left-[10%] z-30 w-16 md:w-28">
+              <FloatingElement delay={3.5 + 0.8} yOffset={25} duration={4.8}>
+                <img src="images/spice_cinnamon_1784383237128.png" className="w-full object-contain md:blur-[2px] md:drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform rotate-45" alt="Cinnamon" />
+              </FloatingElement>
+            </ParallaxWrapper>
           </FadeIn>
         </motion.div>
       </div>
