@@ -1,8 +1,10 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { useIsMobile } from "../hooks/useIsMobile"
 
 export function CraftedFresh() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const isMobile = useIsMobile()
   
   // Track scroll progress within the 300vh container
   const { scrollYProgress } = useScroll({
@@ -58,27 +60,31 @@ export function CraftedFresh() {
         />
 
         {/* Background Layer (Z-10) */}
-        <div className="absolute inset-0 z-10 pointer-events-none">
-          <motion.div style={{ y: bgY1, rotate: bgRotate1, willChange: 'transform' }} className="absolute top-[20%] left-[15%] w-10 md:w-12 opacity-30">
-            <img src="images/spice_cardamom_1784384378093.png" className="w-full h-full md:blur-[2px]" alt="" />
-          </motion.div>
-          <motion.div style={{ y: bgY2, rotate: bgRotate1, willChange: 'transform' }} className="absolute bottom-[30%] right-[20%] w-12 md:w-16 opacity-20">
-            <img src="images/spice_star_anise_1784383227241.png" className="w-full h-full md:blur-[3px]" alt="" />
-          </motion.div>
-        </div>
+        {!isMobile && (
+          <div className="absolute inset-0 z-10 pointer-events-none">
+            <motion.div style={{ y: bgY1, rotate: bgRotate1, willChange: 'transform' }} className="absolute top-[20%] left-[15%] w-10 md:w-12 opacity-30">
+              <img src="images/spice_cardamom_1784384378093.png" className="w-full h-full md:blur-[2px]" alt="" />
+            </motion.div>
+            <motion.div style={{ y: bgY2, rotate: bgRotate1, willChange: 'transform' }} className="absolute bottom-[30%] right-[20%] w-12 md:w-16 opacity-20">
+              <img src="images/spice_star_anise_1784383227241.png" className="w-full h-full md:blur-[3px]" alt="" />
+            </motion.div>
+          </div>
+        )}
 
         {/* Midground Layer (Z-20) */}
-        <div className="absolute inset-0 z-20 pointer-events-none">
-          <motion.div style={{ y: mgY1, rotate: mgRotate1, willChange: 'transform' }} className="absolute top-[15%] right-[10%] md:right-[15%] w-20 md:w-32 opacity-90">
-            <img src="images/spice_chili_1784383218022.png" className="w-full h-full md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
-          </motion.div>
-          <motion.div style={{ y: mgY2, rotate: mgRotate2, willChange: 'transform' }} className="absolute bottom-[20%] left-[5%] md:left-[10%] w-24 md:w-48 opacity-90">
-            <img src="images/spice_curry_leaf_1784383245455.png" className="w-full h-full md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
-          </motion.div>
-          <motion.div style={{ y: mgY3, rotate: mgRotate3, willChange: 'transform' }} className="absolute top-[60%] right-[25%] md:right-[30%] w-16 md:w-28 opacity-80">
-            <img src="images/spice_cinnamon_1784383237128.png" className="w-full h-full md:drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] md:blur-[1px]" alt="" />
-          </motion.div>
-        </div>
+        {!isMobile && (
+          <div className="absolute inset-0 z-20 pointer-events-none">
+            <motion.div style={{ y: mgY1, rotate: mgRotate1, willChange: 'transform' }} className="absolute top-[15%] right-[10%] md:right-[15%] w-20 md:w-32 opacity-90">
+              <img src="images/spice_chili_1784383218022.png" className="w-full h-full md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
+            </motion.div>
+            <motion.div style={{ y: mgY2, rotate: mgRotate2, willChange: 'transform' }} className="absolute bottom-[20%] left-[5%] md:left-[10%] w-24 md:w-48 opacity-90">
+              <img src="images/spice_curry_leaf_1784383245455.png" className="w-full h-full md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
+            </motion.div>
+            <motion.div style={{ y: mgY3, rotate: mgRotate3, willChange: 'transform' }} className="absolute top-[60%] right-[25%] md:right-[30%] w-16 md:w-28 opacity-80">
+              <img src="images/spice_cinnamon_1784383237128.png" className="w-full h-full md:drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] md:blur-[1px]" alt="" />
+            </motion.div>
+          </div>
+        )}
 
         {/* Typography (Z-30) */}
         <motion.div 
@@ -96,14 +102,16 @@ export function CraftedFresh() {
         </motion.div>
 
         {/* Foreground Layer (Z-50) */}
-        <div className="absolute inset-0 z-50 pointer-events-none">
-          <motion.div style={{ y: fgY1, rotate: fgRotate1, willChange: 'transform' }} className="absolute top-[-5%] left-[-10%] md:top-[-10%] md:left-[-5%] w-40 md:w-96 opacity-40 md:opacity-60">
-            <img src="images/spice_star_anise_1784383227241.png" className="w-full h-full blur-[4px] md:blur-[12px] drop-shadow-none md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)]" alt="" />
-          </motion.div>
-          <motion.div style={{ y: fgY2, rotate: fgRotate2, willChange: 'transform' }} className="absolute bottom-[-10%] right-[-15%] md:bottom-[-20%] md:right-[-10%] w-48 md:w-[500px] opacity-40 md:opacity-70">
-            <img src="images/spice_chili_1784383218022.png" className="w-full h-full blur-[6px] md:blur-[16px] drop-shadow-none md:drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)]" alt="" />
-          </motion.div>
-        </div>
+        {!isMobile && (
+          <div className="absolute inset-0 z-50 pointer-events-none">
+            <motion.div style={{ y: fgY1, rotate: fgRotate1, willChange: 'transform' }} className="absolute top-[-5%] left-[-10%] md:top-[-10%] md:left-[-5%] w-40 md:w-96 opacity-40 md:opacity-60">
+              <img src="images/spice_star_anise_1784383227241.png" className="w-full h-full blur-[4px] md:blur-[12px] drop-shadow-none md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)]" alt="" />
+            </motion.div>
+            <motion.div style={{ y: fgY2, rotate: fgRotate2, willChange: 'transform' }} className="absolute bottom-[-10%] right-[-15%] md:bottom-[-20%] md:right-[-10%] w-48 md:w-[500px] opacity-40 md:opacity-70">
+              <img src="images/spice_chili_1784383218022.png" className="w-full h-full blur-[6px] md:blur-[16px] drop-shadow-none md:drop-shadow-[0_40px_80px_rgba(0,0,0,0.9)]" alt="" />
+            </motion.div>
+          </div>
+        )}
 
       </div>
     </section>
