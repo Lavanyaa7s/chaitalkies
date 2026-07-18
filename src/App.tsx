@@ -11,21 +11,15 @@ import { Contact } from "./components/Contact"
 import { Footer } from "./components/Footer"
 import { BrandIntro } from "./components/animations/BrandIntro"
 import { AmbientAudio } from "./components/AmbientAudio"
-import { useLenis } from "lenis/react"
 
 function App() {
   const [showIntro, setShowIntro] = useState(true)
-
-  const lenis = useLenis()
-
   useEffect(() => {
-    // Lock scroll and stop lenis while intro is visible
+    // Lock scroll while intro is visible
     if (showIntro) {
       document.body.style.overflow = "hidden"
-      lenis?.stop()
     } else {
       document.body.style.overflow = "unset"
-      lenis?.start()
     }
 
     // Trigger the exit animation after exactly 3.5 seconds
