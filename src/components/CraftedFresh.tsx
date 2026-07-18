@@ -1,18 +1,8 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 
 export function CraftedFresh() {
   const containerRef = useRef<HTMLDivElement>(null)
-  
-  // Use state to detect mobile for performance optimizations
-  const [isMobile, setIsMobile] = useState(false)
-  
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
   
   // Track scroll progress within the 300vh container
   const { scrollYProgress } = useScroll({
