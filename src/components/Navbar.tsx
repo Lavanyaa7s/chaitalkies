@@ -40,7 +40,7 @@ export function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut", delay: 3.5 }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 border-b border-gold/10 ${
-        isScrolled ? "bg-navy/85 backdrop-blur-md shadow-lg shadow-black/20" : "bg-transparent border-transparent"
+        isScrolled ? "bg-navy/95 md:bg-navy/85 md:backdrop-blur-md shadow-lg shadow-black/20" : "bg-transparent border-transparent"
       }`}
     >
       <div className={`max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between transition-all duration-500 ${isScrolled ? "h-16" : "h-20"}`}>

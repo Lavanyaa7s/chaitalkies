@@ -12,8 +12,8 @@ export function Hero() {
     <section id="home" className="relative min-h-[80vh] flex items-start overflow-hidden bg-navy pt-20 md:pt-[100px] pb-16">
       {/* Background Glows */}
       <FadeIn duration={2} className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none transform translate-x-1/3 -translate-y-1/3" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px] mix-blend-screen pointer-events-none transform -translate-x-1/4 translate-y-1/4" />
+        <div className="hidden md:block absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[100px] mix-blend-screen pointer-events-none transform translate-x-1/3 -translate-y-1/3" />
+        <div className="hidden md:block absolute bottom-0 left-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px] mix-blend-screen pointer-events-none transform -translate-x-1/4 translate-y-1/4" />
       </FadeIn>
       <div className="absolute inset-0 grain-dots opacity-20 pointer-events-none z-10" />
 
@@ -88,19 +88,21 @@ export function Hero() {
             <ParallaxWrapper speed={0.05} className="relative w-full md:w-[115%] max-w-none z-20 flex justify-center items-center">
               
               {/* Soft Golden Glow behind the plate */}
-              <div className="absolute inset-0 bg-gold/20 blur-[100px] rounded-full transform scale-75 pointer-events-none z-0" />
+              <div className="hidden md:block absolute inset-0 bg-gold/20 blur-[100px] rounded-full transform scale-75 pointer-events-none z-0" />
 
               {/* Steam Effect */}
               <div className="absolute inset-0 -top-20 z-10 pointer-events-none flex justify-center opacity-30">
-                <motion.div
+                <motion.div 
+                  className="w-16 h-16 bg-white/20 rounded-full mx-auto hidden md:block"
+                  initial={{ opacity: 0 }}
                   animate={{ y: [0, -100], opacity: [0, 1, 0], scale: [1, 1.5], filter: ["blur(10px)", "blur(20px)"] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                  className="w-20 h-20 bg-white/30 rounded-full"
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
                 />
-                <motion.div
+                <motion.div 
+                  className="w-24 h-24 bg-white/20 rounded-full ml-10 hidden md:block"
+                  initial={{ opacity: 0 }}
                   animate={{ y: [0, -120], opacity: [0, 0.8, 0], scale: [1, 2], filter: ["blur(15px)", "blur(25px)"] }}
-                  transition={{ duration: 5, repeat: Infinity, delay: 2, ease: "linear" }}
-                  className="w-24 h-24 bg-white/20 rounded-full ml-10"
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeOut", delay: 1 }}
                 />
               </div>
 

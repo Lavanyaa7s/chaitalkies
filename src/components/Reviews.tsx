@@ -38,7 +38,7 @@ const ReviewCard = ({ review }: { review: any }) => {
       {/* Gold glow beneath the active card */}
       <div className="absolute inset-0 bg-gold/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       
-      <div className="w-full bg-navy-card/60 backdrop-blur-md border border-gold/10 group-hover:border-gold/40 group-hover:bg-navy-card/90 transition-colors duration-500 shadow-lg group-hover:shadow-[0_20px_50px_rgba(242,196,26,0.15)] flex flex-col h-full rounded-3xl overflow-hidden relative z-10">
+      <div className="w-full bg-navy-card/90 md:bg-navy-card/60 md:backdrop-blur-md border border-gold/10 group-hover:border-gold/40 group-hover:bg-navy-card/95 transition-colors duration-500 shadow-lg group-hover:shadow-[0_20px_50px_rgba(242,196,26,0.15)] flex flex-col h-full rounded-3xl overflow-hidden relative z-10">
         <div className="p-7 flex flex-col h-[280px]">
           <div className="flex gap-1 mb-5">
             {[...Array(5)].map((_, j) => (
@@ -116,7 +116,7 @@ export function Reviews() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "100px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="bg-navy-card/80 backdrop-blur-md border border-gold/20 rounded-2xl p-5 flex items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+          className="bg-navy-card/95 md:bg-navy-card/80 md:backdrop-blur-md border border-gold/20 rounded-2xl p-5 flex items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
         >
           <div className="flex items-center justify-center gap-6">
             <div>
@@ -150,7 +150,7 @@ export function Reviews() {
 
       <div className="relative z-10 w-full overflow-visible flex flex-col gap-6">
         {/* Center Brightness Enhancement overlay */}
-        <div className="absolute inset-0 left-1/2 -translate-x-1/2 w-1/3 bg-gold/5 blur-3xl rounded-full z-0 pointer-events-none mix-blend-color-dodge" />
+        <div className="hidden md:block absolute inset-0 left-1/2 -translate-x-1/2 w-1/3 bg-gold/5 blur-3xl rounded-full z-0 pointer-events-none mix-blend-color-dodge" />
         
         {/* Edge Fade Masks */}
         <div className="absolute top-0 bottom-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#0B1120] to-transparent z-20 pointer-events-none" />

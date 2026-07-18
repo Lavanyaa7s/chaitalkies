@@ -21,7 +21,7 @@ function Counter({ from, to, suffix = "", duration = 2 }: { from: number, to: nu
 export function OurStory() {
   return (
     <section id="about" className="py-24 md:py-32 bg-navy-card/40 border-y border-gold/10 relative overflow-hidden">
-      <div className="absolute -right-24 -top-24 w-72 h-72 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
+      <div className="hidden md:block absolute -right-24 -top-24 w-72 h-72 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
       
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
         <div>

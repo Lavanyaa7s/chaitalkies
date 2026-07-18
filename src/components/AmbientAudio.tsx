@@ -58,7 +58,7 @@ export function AmbientAudio() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 3.5 }} // Fade in slightly after intro
       onClick={toggleAudio}
-      className={`fixed bottom-6 left-6 z-[60] flex items-center gap-3 px-4 py-2.5 rounded-full backdrop-blur-md border transition-all duration-500 overflow-hidden group
+      className={`fixed bottom-6 left-6 z-[60] flex items-center gap-3 px-4 py-2.5 rounded-full bg-navy/95 md:bg-navy/80 md:backdrop-blur-md border transition-all duration-500 overflow-hidden group
         ${isPlaying 
           ? "bg-navy-card/80 border-gold/30 shadow-[0_0_20px_rgba(242,196,26,0.15)]" 
           : "bg-navy-card/50 border-gold/10 hover:border-gold/30 hover:bg-navy-card/80"
