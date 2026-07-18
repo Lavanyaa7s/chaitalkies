@@ -63,11 +63,20 @@ export function CraftedFresh() {
         {!isMobile && (
           <div className="absolute inset-0 z-10 pointer-events-none">
             <motion.div style={{ y: bgY1, rotate: bgRotate1, willChange: 'transform' }} className="absolute top-[20%] left-[15%] w-10 md:w-12 opacity-30">
-              <img src="images/spice_cardamom_1784384378093.png" className="w-full h-full md:blur-[2px]" alt="" />
+              <img src="images/spice_cardamom_1784384378093.png" className="w-full h-full blur-[2px]" alt="" />
             </motion.div>
             <motion.div style={{ y: bgY2, rotate: bgRotate1, willChange: 'transform' }} className="absolute bottom-[30%] right-[20%] w-12 md:w-16 opacity-20">
-              <img src="images/spice_star_anise_1784383227241.png" className="w-full h-full md:blur-[3px]" alt="" />
+              <img src="images/spice_star_anise_1784383227241.png" className="w-full h-full blur-[3px]" alt="" />
             </motion.div>
+          </div>
+        )}
+
+        {isMobile && (
+          <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+            <img src="images/spice_cardamom_1784384378093.png" className="absolute top-[10%] left-[5%] w-8 opacity-40 transform -rotate-12" alt="" />
+            <img src="images/spice_star_anise_1784383227241.png" className="absolute top-[40%] right-[10%] w-10 opacity-30 transform rotate-45" alt="" />
+            <img src="images/spice_chili_1784383218022.png" className="absolute bottom-[30%] left-[10%] w-12 opacity-40 transform rotate-[60deg]" alt="" />
+            <img src="images/spice_curry_leaf_1784383245455.png" className="absolute bottom-[10%] right-[5%] w-16 opacity-40 transform -rotate-45" alt="" />
           </div>
         )}
 
@@ -75,13 +84,13 @@ export function CraftedFresh() {
         {!isMobile && (
           <div className="absolute inset-0 z-20 pointer-events-none">
             <motion.div style={{ y: mgY1, rotate: mgRotate1, willChange: 'transform' }} className="absolute top-[15%] right-[10%] md:right-[15%] w-20 md:w-32 opacity-90">
-              <img src="images/spice_chili_1784383218022.png" className="w-full h-full md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
+              <img src="images/spice_chili_1784383218022.png" className="w-full h-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
             </motion.div>
             <motion.div style={{ y: mgY2, rotate: mgRotate2, willChange: 'transform' }} className="absolute bottom-[20%] left-[5%] md:left-[10%] w-24 md:w-48 opacity-90">
-              <img src="images/spice_curry_leaf_1784383245455.png" className="w-full h-full md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
+              <img src="images/spice_curry_leaf_1784383245455.png" className="w-full h-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]" alt="" />
             </motion.div>
             <motion.div style={{ y: mgY3, rotate: mgRotate3, willChange: 'transform' }} className="absolute top-[60%] right-[25%] md:right-[30%] w-16 md:w-28 opacity-80">
-              <img src="images/spice_cinnamon_1784383237128.png" className="w-full h-full md:drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] md:blur-[1px]" alt="" />
+              <img src="images/spice_cinnamon_1784383237128.png" className="w-full h-full drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] blur-[1px]" alt="" />
             </motion.div>
           </div>
         )}

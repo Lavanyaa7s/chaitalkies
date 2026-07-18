@@ -120,33 +120,43 @@ export function Hero() {
               <>
                 <ParallaxWrapper speed={0.1} className="absolute top-[10%] right-[0%] z-30 w-16 md:w-24">
                   <FloatingElement delay={3.5 + 0} yOffset={25} duration={5}>
-                    <img src="images/spice_star_anise_1784383227241.png" className="w-full object-contain md:blur-[1px] md:drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] transform rotate-12" alt="Star Anise" />
+                    <img src="images/spice_star_anise_1784383227241.png" className="w-full object-contain blur-[1px] drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)] transform rotate-12" alt="Star Anise" />
                   </FloatingElement>
                 </ParallaxWrapper>
                 
                 <ParallaxWrapper speed={0.15} className="absolute bottom-[20%] right-[5%] z-30 w-20 md:w-32">
                   <FloatingElement delay={3.5 + 1} yOffset={35} duration={6}>
-                    <img src="images/spice_chili_1784383218022.png" className="w-full object-contain md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-45" alt="Chili" />
+                    <img src="images/spice_chili_1784383218022.png" className="w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-45" alt="Chili" />
                   </FloatingElement>
                 </ParallaxWrapper>
                 
                 <ParallaxWrapper speed={0.08} className="absolute top-[35%] left-[-5%] z-30 w-12 md:w-20">
                   <FloatingElement delay={3.5 + 0.5} yOffset={20} duration={4.5}>
-                    <img src="images/spice_cardamom_1784384378093.png" className="w-full object-contain md:blur-[1px] md:drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] transform -rotate-12" alt="Cardamom" />
+                    <img src="images/spice_cardamom_1784384378093.png" className="w-full object-contain blur-[1px] drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] transform -rotate-12" alt="Cardamom" />
                   </FloatingElement>
                 </ParallaxWrapper>
                 
                 <ParallaxWrapper speed={0.12} className="absolute bottom-[10%] left-[5%] z-30 w-24 md:w-36">
                   <FloatingElement delay={3.5 + 1.5} yOffset={30} duration={5.5}>
-                    <img src="images/spice_curry_leaf_1784383245455.png" className="w-full object-contain md:drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-[70deg]" alt="Curry Leaves" />
+                    <img src="images/spice_curry_leaf_1784383245455.png" className="w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transform rotate-[70deg]" alt="Curry Leaves" />
                   </FloatingElement>
                 </ParallaxWrapper>
                 
                 <ParallaxWrapper speed={0.1} className="absolute top-[15%] left-[10%] z-30 w-16 md:w-28">
                   <FloatingElement delay={3.5 + 0.8} yOffset={25} duration={4.8}>
-                    <img src="images/spice_cinnamon_1784383237128.png" className="w-full object-contain md:blur-[2px] md:drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform rotate-45" alt="Cinnamon" />
+                    <img src="images/spice_cinnamon_1784383237128.png" className="w-full object-contain blur-[2px] drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform rotate-45" alt="Cinnamon" />
                   </FloatingElement>
                 </ParallaxWrapper>
+              </>
+            )}
+
+            {isMobile && (
+              <>
+                <img src="images/spice_star_anise_1784383227241.png" className="absolute top-[15%] right-[5%] z-30 w-14 object-contain transform rotate-12 opacity-80" alt="Star Anise" />
+                <img src="images/spice_chili_1784383218022.png" className="absolute bottom-[20%] right-[10%] z-30 w-16 object-contain transform rotate-45 opacity-90" alt="Chili" />
+                <img src="images/spice_cardamom_1784384378093.png" className="absolute top-[35%] left-[0%] z-30 w-12 object-contain transform -rotate-12 opacity-80" alt="Cardamom" />
+                <img src="images/spice_curry_leaf_1784383245455.png" className="absolute bottom-[15%] left-[5%] z-30 w-20 object-contain transform rotate-[70deg] opacity-90" alt="Curry Leaves" />
+                <img src="images/spice_cinnamon_1784383237128.png" className="absolute top-[20%] left-[10%] z-30 w-16 object-contain transform rotate-45 opacity-80" alt="Cinnamon" />
               </>
             )}
           </FadeIn>
