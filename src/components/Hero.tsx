@@ -62,6 +62,7 @@ export function Hero() {
                       ★
                     </motion.span>
                   ))}
+                </div>
                 <span className="text-cream/90 text-sm md:text-base font-medium ml-2">4.6 Rating</span>
               </div>
             </FadeUp>
