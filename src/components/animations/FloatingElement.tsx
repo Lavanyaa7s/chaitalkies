@@ -31,10 +31,10 @@ export function FloatingElement({
         ease: "easeInOut",
         delay,
       }}
+      style={{ willChange: 'transform' }}
       className={className}
     >
       {children}
     </motion.div>
   )
 }
-
