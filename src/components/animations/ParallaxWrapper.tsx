@@ -23,8 +23,10 @@ export function ParallaxWrapper({ children, speed = 0.5, className }: ParallaxWr
   if (shouldReduceMotion) return <div className={className}>{children}</div>
 
   return (
-    <motion.div ref={ref} style={{ y, willChange: 'transform' }} className={className}>
-      {children}
-    </motion.div>
+    <div ref={ref} className={className}>
+      <motion.div style={{ y, willChange: 'transform' }} className="w-full h-full flex items-center justify-center">
+        {children}
+      </motion.div>
+    </div>
   )
 }
