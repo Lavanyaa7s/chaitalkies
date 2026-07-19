@@ -17,7 +17,6 @@ export type MenuItem = {
 const MENU_DATA: Record<string, MenuItem[]> = {
   chai: [
     { title: "Signature Masala Chai", desc: "Our famous house blend of strong Assam tea brewed with crushed ginger, cardamom, and secret spices.", price: "RM 6.90", img: "images/chaiwithmurruku.jpg", ingredients: ["Assam Black Tea", "Fresh Ginger", "Green Cardamom", "Cloves", "Cinnamon", "Fresh Milk"] },
-    { title: "Claypot Kaapi", desc: "Traditional slow-brewed decoction, served in a classic earthen claypot for a rustic and earthy flavor.", price: "RM 6.50", img: "images/claypot.png", ingredients: ["Plantation A Coffee Beans", "Chicory (15%)", "Fresh Milk", "Brown Sugar"] },
     { title: "Rose Falooda", desc: "A rich, chilled dessert drink layered with rose syrup, sweet basil seeds, vermicelli, and ice cream.", price: "RM 12.90", img: "images/falooda.jpg", ingredients: ["Rose Syrup", "Basil Seeds", "Vermicelli", "Milk", "Vanilla Ice Cream", "Nuts"] },
     { title: "Mint Lime Mojito", desc: "A refreshing cooler muddled with fresh mint leaves, lime juice, and a hint of roasted cumin.", price: "RM 8.50", img: "images/mojito.jpg", ingredients: ["Fresh Mint", "Lime Juice", "Roasted Cumin", "Soda Water", "Ice"] },
   ],
