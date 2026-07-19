@@ -17,11 +17,9 @@ export type MenuItem = {
 const MENU_DATA: Record<string, MenuItem[]> = {
   chai: [
     { title: "Signature Masala Chai", desc: "Our famous house blend of strong Assam tea brewed with crushed ginger, cardamom, and secret spices.", price: "RM 6.90", img: "images/chaiwithmurruku.jpg", ingredients: ["Assam Black Tea", "Fresh Ginger", "Green Cardamom", "Cloves", "Cinnamon", "Fresh Milk"] },
-    { title: "Filter Kaapi", desc: "Traditional slow-brewed decoction, frothed tableside in a classic steel davara-tumbler for the perfect start.", price: "RM 6.50", img: "images/claypot.png", ingredients: ["Plantation A Coffee Beans", "Chicory (15%)", "Fresh Milk", "Brown Sugar"] },
-    { title: "Saffron Chai", desc: "A luxurious blend infused with premium Kashmiri saffron strands, slow-cooked for a rich golden hue.", price: "RM 8.90", img: "images/masalachai.jpg", ingredients: ["Assam Tea", "Kashmiri Saffron", "Cardamom", "Almonds", "Milk"] },
-    { title: "Rose Chai", desc: "A fragrant twist on our classic tea, infused with dried rose petals and a hint of cardamom.", price: "RM 7.50", img: "images/falooda.jpg", ingredients: ["Black Tea", "Dried Rose Petals", "Cardamom", "Rose Water", "Milk"] },
-    { title: "Iced Masala Chai", desc: "Our signature spiced tea, chilled over ice for a refreshing kick on a hot afternoon.", price: "RM 8.00", img: "images/mojito.jpg", ingredients: ["Assam Tea", "Masala Spices", "Ice", "Fresh Milk", "Simple Syrup"] },
-    { title: "Ginger Chai", desc: "A fiery and strong brew packed with extra freshly grated ginger for an instant energy boost.", price: "RM 6.50", img: "images/chaiwithmurruku.jpg", ingredients: ["Black Tea", "Extra Fresh Ginger", "Milk", "Sugar"] },
+    { title: "Claypot Kaapi", desc: "Traditional slow-brewed decoction, served in a classic earthen claypot for a rustic and earthy flavor.", price: "RM 6.50", img: "images/claypot.png", ingredients: ["Plantation A Coffee Beans", "Chicory (15%)", "Fresh Milk", "Brown Sugar"] },
+    { title: "Rose Falooda", desc: "A rich, chilled dessert drink layered with rose syrup, sweet basil seeds, vermicelli, and ice cream.", price: "RM 12.90", img: "images/falooda.jpg", ingredients: ["Rose Syrup", "Basil Seeds", "Vermicelli", "Milk", "Vanilla Ice Cream", "Nuts"] },
+    { title: "Mint Lime Mojito", desc: "A refreshing cooler muddled with fresh mint leaves, lime juice, and a hint of roasted cumin.", price: "RM 8.50", img: "images/mojito.jpg", ingredients: ["Fresh Mint", "Lime Juice", "Roasted Cumin", "Soda Water", "Ice"] },
   ],
   snacks: [
     { title: "Chai & Murukku", desc: "Strong, spiced masala chai poured tableside, perfectly paired with our crisp, hand-twisted murukku.", price: "RM 7.00", img: "images/chaiwithmurruku.jpg", ingredients: ["Rice Flour", "Urad Dal", "Cumin Seeds", "Butter", "Salt"] },
