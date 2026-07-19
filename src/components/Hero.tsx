@@ -84,8 +84,8 @@ export function Hero() {
           </div>
 
           {/* Image & Floating Spices */}
-          <FadeIn delay={3.5 + 0.4} duration={1.5} className="relative h-[450px] md:h-[550px] flex items-center justify-center group z-10 w-full">
-            <ParallaxWrapper speed={0.05} className="relative w-full md:w-[115%] max-w-none z-20 flex justify-center items-center">
+          <FadeIn delay={3.5 + 0.4} duration={1.5} className="relative h-[380px] md:h-[550px] flex items-center justify-center group z-10 w-full mt-4 md:mt-0">
+            <ParallaxWrapper speed={0.05} className="relative w-[110%] md:w-[115%] max-w-none z-20 flex justify-center items-center">
               
               {/* Soft Golden Glow behind the plate */}
               <div className="hidden md:block absolute inset-0 bg-gold/20 blur-[100px] rounded-full transform scale-75 pointer-events-none z-0" />
