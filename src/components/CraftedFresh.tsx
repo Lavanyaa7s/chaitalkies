@@ -73,10 +73,10 @@ export function CraftedFresh() {
 
         {isMobile && (
           <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
-            <img src="images/spice_cardamom_1784384378093.png" className="absolute top-[10%] left-[5%] w-8 opacity-40 transform -rotate-12" alt="" />
-            <img src="images/spice_star_anise_1784383227241.png" className="absolute top-[40%] right-[10%] w-10 opacity-30 transform rotate-45" alt="" />
-            <img src="images/spice_chili_1784383218022.png" className="absolute bottom-[30%] left-[10%] w-12 opacity-40 transform rotate-[60deg]" alt="" />
-            <img src="images/spice_curry_leaf_1784383245455.png" className="absolute bottom-[10%] right-[5%] w-16 opacity-40 transform -rotate-45" alt="" />
+            <img src="images/spice_cardamom_1784384378093.png" className="animate-tw-float absolute top-[10%] left-[5%] w-8 opacity-40 transform -rotate-12" alt="" />
+            <img src="images/spice_star_anise_1784383227241.png" className="animate-tw-float-delayed absolute top-[40%] right-[10%] w-10 opacity-30 transform rotate-45" alt="" />
+            <img src="images/spice_chili_1784383218022.png" className="animate-tw-float absolute bottom-[30%] left-[10%] w-12 opacity-40 transform rotate-[60deg]" alt="" />
+            <img src="images/spice_curry_leaf_1784383245455.png" className="animate-tw-float-delayed absolute bottom-[10%] right-[5%] w-16 opacity-40 transform -rotate-45" alt="" />
           </div>
         )}
 

@@ -9,6 +9,17 @@
     background-image: radial-gradient(rgba(245, 197, 66, 0.35) 1px, transparent 1px);
     background-size: 26px 26px;
   }
+  
+  @keyframes tw-float {
+    0%, 100% { transform: translateY(0) rotate(var(--tw-rotate, 0deg)) scale(var(--tw-scale, 1)); }
+    50% { transform: translateY(-15px) rotate(var(--tw-rotate, 0deg)) scale(var(--tw-scale, 1)); }
+  }
+  .animate-tw-float {
+    animation: tw-float 6s ease-in-out infinite;
+  }
+  .animate-tw-float-delayed {
+    animation: tw-float 7s ease-in-out infinite 2s;
+  }
 }
 
 @layer base {

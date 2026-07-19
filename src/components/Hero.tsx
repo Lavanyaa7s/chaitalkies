@@ -106,16 +106,18 @@ export function Hero() {
                 />
               </div>
 
-              <motion.img 
-                src="images/setmeals.png" 
-                alt="Signature Thali" 
-                className="w-full h-auto object-contain drop-shadow-2xl md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] relative z-20"
-                style={{ willChange: 'transform, opacity' }}
-                initial={{ scale: 0.85, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                whileHover={{ scale: 1.02 }}
-              />
+              <div className="w-full relative z-20 md:animate-none animate-tw-float">
+                <motion.img 
+                  src="images/setmeals.png" 
+                  alt="Signature Thali" 
+                  className="w-full h-auto object-contain drop-shadow-2xl md:drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+                  style={{ willChange: 'transform, opacity' }}
+                  initial={{ scale: 0.85, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  whileHover={{ scale: 1.02 }}
+                />
+              </div>
             </ParallaxWrapper>
             
             {!isMobile && (
@@ -154,11 +156,11 @@ export function Hero() {
 
             {isMobile && (
               <>
-                <img src="images/spice_star_anise_1784383227241.png" className="absolute top-[15%] right-[5%] z-30 w-14 object-contain transform rotate-12 opacity-80" alt="Star Anise" />
-                <img src="images/spice_chili_1784383218022.png" className="absolute bottom-[20%] right-[10%] z-30 w-16 object-contain transform rotate-45 opacity-90" alt="Chili" />
-                <img src="images/spice_cardamom_1784384378093.png" className="absolute top-[35%] left-[0%] z-30 w-12 object-contain transform -rotate-12 opacity-80" alt="Cardamom" />
-                <img src="images/spice_curry_leaf_1784383245455.png" className="absolute bottom-[15%] left-[5%] z-30 w-20 object-contain transform rotate-[70deg] opacity-90" alt="Curry Leaves" />
-                <img src="images/spice_cinnamon_1784383237128.png" className="absolute top-[20%] left-[10%] z-30 w-16 object-contain transform rotate-45 opacity-80" alt="Cinnamon" />
+                <img src="images/spice_star_anise_1784383227241.png" className="animate-tw-float absolute top-[15%] right-[5%] z-30 w-14 object-contain transform rotate-12 opacity-80" alt="Star Anise" />
+                <img src="images/spice_chili_1784383218022.png" className="animate-tw-float-delayed absolute bottom-[20%] right-[10%] z-30 w-16 object-contain transform rotate-45 opacity-90" alt="Chili" />
+                <img src="images/spice_cardamom_1784384378093.png" className="animate-tw-float absolute top-[35%] left-[0%] z-30 w-12 object-contain transform -rotate-12 opacity-80" alt="Cardamom" />
+                <img src="images/spice_curry_leaf_1784383245455.png" className="animate-tw-float-delayed absolute bottom-[15%] left-[5%] z-30 w-20 object-contain transform rotate-[70deg] opacity-90" alt="Curry Leaves" />
+                <img src="images/spice_cinnamon_1784383237128.png" className="animate-tw-float absolute top-[20%] left-[10%] z-30 w-16 object-contain transform rotate-45 opacity-80" alt="Cinnamon" />
               </>
             )}
           </FadeIn>
