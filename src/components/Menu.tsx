@@ -110,9 +110,9 @@ export function Menu() {
                         <div className="bg-gold/10 text-navy font-bold px-6 py-2 rounded-full border border-gold/30 text-sm whitespace-nowrap transition-all duration-300">
                           {item.price}
                         </div>
-                        <button className="bg-navy text-gold w-10 h-10 rounded-full flex items-center justify-center shadow-md group-hover:bg-gold group-hover:text-navy group-hover:shadow-[0_0_20px_rgba(242,196,26,0.6)] group-hover:rotate-90 transition-all duration-500">
+                        <button className="bg-navy text-gold w-10 h-10 rounded-full flex items-center justify-center shadow-md group-hover:bg-gold group-hover:text-navy group-hover:shadow-[0_0_20px_rgba(242,196,26,0.6)] group-hover:rotate-45 transition-all duration-500">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                           </svg>
                         </button>
                       </div>
