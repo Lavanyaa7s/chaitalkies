@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import type { MenuItem } from "./Menu"
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 
 interface OrderModalProps {
   item: MenuItem
@@ -8,7 +8,6 @@ interface OrderModalProps {
 }
 
 export function OrderModal({ item, onClose }: OrderModalProps) {
-  const [quantity, setQuantity] = useState(1)
 
   // Prevent background scrolling when modal is open
   useEffect(() => {
@@ -17,10 +16,6 @@ export function OrderModal({ item, onClose }: OrderModalProps) {
       document.body.style.overflow = "unset"
     }
   }, [])
-
-  // Parse price number for total calculation
-  const priceNumber = parseFloat(item.price.replace("RM ", ""))
-  const total = (priceNumber * quantity).toFixed(2)
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6">
@@ -55,7 +50,7 @@ export function OrderModal({ item, onClose }: OrderModalProps) {
         </div>
 
         {/* Right Side: Details & Actions */}
-        <div className="md:w-1/2 p-8 md:p-10 flex flex-col justify-between bg-cream text-navy relative">
+        <div className="md:w-1/2 p-8 md:p-10 flex flex-col justify-start bg-cream text-navy relative">
           
           {/* Close Button */}
           <button 
@@ -68,14 +63,20 @@ export function OrderModal({ item, onClose }: OrderModalProps) {
           </button>
 
           <div>
-            <div className="text-gold font-bold text-xs uppercase tracking-widest mb-2 mt-4 md:mt-0">Selected Item</div>
+            <div className="flex items-center justify-between mb-2 mt-4 md:mt-0 pr-10">
+              <div className="text-gold font-bold text-xs uppercase tracking-widest">Menu Detail</div>
+              <div className="bg-gold/10 text-navy font-bold px-4 py-1 rounded-full border border-gold/30 text-sm">
+                {item.price}
+              </div>
+            </div>
+            
             <h2 className="text-3xl font-bold mb-4 pr-10">{item.title}</h2>
             <p className="text-navy/70 leading-relaxed mb-6 font-medium">
               {item.desc}
             </p>
 
             {/* Ingredients */}
-            <div className="mb-8">
+            <div>
               <h4 className="font-bold text-sm mb-3">Key Ingredients</h4>
               <div className="flex flex-wrap gap-2">
                 {item.ingredients?.map((ing, idx) => (
@@ -85,40 +86,6 @@ export function OrderModal({ item, onClose }: OrderModalProps) {
                 ))}
               </div>
             </div>
-          </div>
-
-          <div className="mt-6 md:mt-0">
-            {/* Quantity Selector */}
-            <div className="flex items-center justify-between mb-6 border-y border-navy/10 py-4">
-              <span className="font-bold">Quantity</span>
-              <div className="flex items-center gap-4 bg-navy/5 rounded-full p-1.5 border border-navy/10">
-                <button 
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-navy font-bold hover:bg-gold hover:text-navy transition-colors"
-                >
-                  -
-                </button>
-                <span className="w-6 text-center font-bold text-lg">{quantity}</span>
-                <button 
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-navy font-bold hover:bg-gold hover:text-navy transition-colors"
-                >
-                  +
-                </button>
-              </div>
-            </div>
-
-            {/* Add to Order Button */}
-            <button 
-              onClick={() => {
-                alert(`Added ${quantity}x ${item.title} to order!`)
-                onClose()
-              }}
-              className="w-full bg-navy text-gold py-4 rounded-full font-bold text-lg flex items-center justify-between px-8 hover:shadow-[0_10px_30px_rgba(11,17,32,0.3)] hover:-translate-y-1 transition-all duration-300 group"
-            >
-              <span>Add to Order</span>
-              <span className="bg-gold/10 px-4 py-1.5 rounded-full group-hover:bg-gold group-hover:text-navy transition-colors">RM {total}</span>
-            </button>
           </div>
           
         </div>
